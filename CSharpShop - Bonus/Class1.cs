@@ -90,7 +90,7 @@ namespace CSharpShop___Bonus
             {
             Console.WriteLine("---------" + this.Nome + "---------" + "\n");
             Console.WriteLine("Descrizione: " + this.Descrizione);
-            Console.WriteLine("Codice Prodotto: " + this.NumeroProdotto.ToString().PadLeft(12, '0'));      //Stampa di codice prodotto in padding left con leading 0's     *BONUS*
+            Console.WriteLine("Codice Prodotto: " + this.NumeroProdotto.ToString().PadLeft(8, '0'));      //Stampa di codice prodotto in padding left con leading 0's     *BONUS*
             Console.WriteLine("Prezzo prodotto: " + this.Prezzo + " Euro");
             Console.WriteLine("Iva prodotto: " + this.Iva + "%");
             Console.WriteLine("Prezzo con Iva: " + PrezzoIvato(this.Prezzo, this.Iva) + "\n");
