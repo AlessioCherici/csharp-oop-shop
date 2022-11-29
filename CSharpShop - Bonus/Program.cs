@@ -77,7 +77,7 @@ Prodotto Prodotto5 = new Prodotto();
 Prodotto5.SetNome("CyberPunk 2077");
 Prodotto5.SetNumeroProdotto();
 Prodotto5.SetDescrizione("CyberPunk 2077 e' ambientato in un lontano futuro distopico disfattista dove le persone" + "\n" +
-    "indossano augment cibernetici per incrementare forza, intelligenza, velocità, spesso a discapito della loro salute /sanità mentale ");
+    "indossano augment cibernetici per incrementare forza, intelligenza, velocità," + "\n" + "spesso a discapito della loro salute /sanità mentale");
 Prodotto5.SetPrezzo(35.60d);
 Prodotto5.SetIva(22);
 Prodotto5.StampaTutto();
