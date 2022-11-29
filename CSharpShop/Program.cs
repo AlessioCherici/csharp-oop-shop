@@ -27,7 +27,30 @@ Console.WriteLine("Inserisci il nome del prodotto che vuoi registrare");
 string NomeInserito = Console.ReadLine();
 Prodotto1.SetNome(NomeInserito);
 
+Prodotto1.SetNumeroProdotto();
+
+
+Console.WriteLine("Ora inserisci la descrizione del prodotto");
+string DescrizioneInserita =(Console.ReadLine());
+Prodotto1.SetDescrizione(DescrizioneInserita);
+
 Console.WriteLine("Ora inserisci il prezzo del prodotto");
-float PrezzoInSerito = Console.ReadLine();
-Prodotto1.SetNome(PrezzoInSerito + "Euro");
+double PrezzoInSerito = double.Parse(Console.ReadLine());
+Prodotto1.SetPrezzo(PrezzoInSerito);
+
+Console.WriteLine("Ora inserisci l'Iva del prodotto (senza il simbolo %)");
+double IvaInserita = double.Parse(Console.ReadLine());
+Prodotto1.SetIva(IvaInserita);
+
+Prodotto1.StampaTutto();
+
+
+
+
+
+
+
+
+
+
 

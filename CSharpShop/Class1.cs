@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Dynamic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -12,7 +13,7 @@ namespace CSharpShop
         private int NumeroProdotto;
         private string Descrizione;
         private double Prezzo;
-        private float Iva;
+        private double Iva;
 
         public Prodotto()
             {
@@ -25,14 +26,7 @@ namespace CSharpShop
 
 
 
-        //------------------------- Metodi -------------------------
-
-        public int GeneratoreRGN()
-            {
-            Random NumeroRNGProdotto = new Random();
-            int CodiceProdotto = NumeroRNGProdotto.Next(100000000);
-            return CodiceProdotto;
-            }
+        //------------------------- Metodi Get -------------------------
 
         public double GetPrezzo()
             {
@@ -49,9 +43,16 @@ namespace CSharpShop
             return NumeroProdotto;
             }
 
-        public float GetIva()
+        public double GetIva()
             {
             return this.Iva;
+            }
+
+        //------------------------- Metodi Set -------------------------
+
+        public void SetNumeroProdotto() 
+            {
+            this.NumeroProdotto = GeneratoreRGN();
             }
 
         public void SetPrezzo(double Prezzo)
@@ -59,7 +60,7 @@ namespace CSharpShop
             this.Prezzo = Prezzo;
             }
 
-        public void SetDescrizione(string descrizione )
+        public void SetDescrizione(string Descrizione)
             {
             this.Descrizione = Descrizione;
             }
@@ -69,10 +70,36 @@ namespace CSharpShop
             this.Nome = Nome;
             }
 
-        public void SetIva(float Iva)
+        public void SetIva(double Iva)
             {
             this.Iva = Iva;
             }
 
+
+        //------------------------- Metodi Calcoli Vari -------------------------
+        public int GeneratoreRGN()
+            {
+            Random NumeroRNGProdotto = new Random();
+            int CodiceProdotto = NumeroRNGProdotto.Next(100000000);
+            return CodiceProdotto;
+            }
+        public double PrezzoIvato(double Prezzo, double Iva)
+            {
+            double ValoreIva = Prezzo * Iva / 100;
+            double PrezzoIvato = Prezzo + ValoreIva;
+            return Math.Round(PrezzoIvato,2);
+            }
+
+        //------------------------- Metodo Stampa Prodotto -------------------------
+
+        public void StampaTutto()
+            {
+            Console.WriteLine("---------" + this.Nome + "---------" + "\n");
+            Console.WriteLine("Descrizione: " + this.Descrizione);
+            Console.WriteLine("Numero Prodotto: " + this.NumeroProdotto);
+            Console.WriteLine("Prezzo prodotto: " + this.Prezzo + " Euro");
+            Console.WriteLine("Iva prodotto: " + this.Iva + "%");
+            Console.WriteLine("Prezzo con Iva: " + PrezzoIvato(this.Prezzo, this.Iva));
+            }
         }
     }
