@@ -54,6 +54,7 @@ Prodotto2.SetDescrizione("Outer Wilds e' un videogioco di esplorazione spaziale,
 Prodotto2.SetPrezzo(22.90d);                          //Veramente poco,considerato il capolavoro che giocherai!
 Prodotto2.SetIva(22);
 Prodotto2.StampaTutto();
+list.Add(Prodotto2);
 
 Prodotto Prodotto3 = new Prodotto();
 Prodotto3.SetNome("Doom Eternal");                     
@@ -63,6 +64,7 @@ Prodotto3.SetDescrizione("Doom Eternal è uno sparatutto in prima persona in cui
 Prodotto3.SetPrezzo(56d);                          
 Prodotto3.SetIva(22);
 Prodotto3.StampaTutto();
+list.Add(Prodotto3);
 
 Prodotto Prodotto4 = new Prodotto();
 Prodotto4.SetNome("Escape From Tarkov");
@@ -72,6 +74,7 @@ Prodotto4.SetDescrizione("Escape From Tarkov è l' esperienza simulativa FPS def
 Prodotto4.SetPrezzo(45.50d);
 Prodotto4.SetIva(22);
 Prodotto4.StampaTutto();
+list.Add(Prodotto4);
 
 Prodotto Prodotto5 = new Prodotto();
 Prodotto5.SetNome("CyberPunk 2077");
@@ -81,6 +84,8 @@ Prodotto5.SetDescrizione("CyberPunk 2077 e' ambientato in un lontano futuro dist
 Prodotto5.SetPrezzo(35.60d);
 Prodotto5.SetIva(22);
 Prodotto5.StampaTutto();
+list.Add(Prodotto5);
+
 
 
 
